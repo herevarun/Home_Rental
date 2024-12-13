@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import Navbar from 'react-bootstrap/Navbar';
 import { Container, Nav, Button } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
-import p1 from '../../images/p1.jpg'
-import p2 from '../../images/p2.jpg'
-import p3 from '../../images/p3.jpg'
-import p4 from '../../images/p4.jpg'
+import p1 from '../../images/pic1.jpg'
+import p2 from '../../images/pic2.jpg'
+import p3 from '../../images/pic3.jpg'
+import p4 from '../../images/pic4.jpg'
 import AllPropertiesCards from '../user/AllPropertiesCards';
 
 const Home = () => {
@@ -17,9 +17,12 @@ const Home = () => {
    };
    return (
       <>
-         <Navbar expand="lg" className="bg-body-tertiary">
+         <Navbar expand="lg" className="bg-body-tertiary navbar">
             <Container fluid>
-               <Navbar.Brand><h2>RentEase</h2></Navbar.Brand>
+               <Navbar.Brand>
+                  <img className='logo-img' src="logo.png"/>
+                  <h2>RentEase</h2>
+               </Navbar.Brand>
                <Navbar.Toggle aria-controls="navbarScroll" />
                <Navbar.Collapse id="navbarScroll">
                   <Nav
@@ -28,10 +31,12 @@ const Home = () => {
                      navbarScroll
                   >
                   </Nav>
-                  <Nav>
-                     <Link to={'/'}>Home</Link>
-                     <Link to={'/login'}>Login</Link>
-                     <Link to={'/register'}>Register</Link>
+                  <Nav className='navbar-brand'>
+                     <Link to={'/'} className='navhover'>Home</Link>
+                     <Link to={'/login' } className='navhover'>Login</Link>
+                     <Link to={'/register'} className='navhover'>Register</Link>
+                     <Link to={'/'} className='navhover'>Contact Us</Link>
+                     <img className='sign' src="sign.png"/>
                   </Nav>
 
                </Navbar.Collapse>
@@ -40,9 +45,9 @@ const Home = () => {
 
 
          <div className='home-body'>
-            <Carousel activeIndex={index} onSelect={handleSelect}>
+            <Carousel activeIndex={index} onSelect={handleSelect} className='images'>
                <Carousel.Item>
-                  <img
+                  <img 
                      src={p1}
                      alt="First slide"
                   />

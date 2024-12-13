@@ -77,9 +77,12 @@ const Login = () => {
 
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container fluid>
-          <Navbar.Brand><h2>RentEase</h2></Navbar.Brand>
+      <Navbar expand="lg" className="bg-body-tertiary navbar">
+            <Container fluid>
+               <Navbar.Brand>
+                  <img className='logo-img' src="logo.png"/>
+                  <h2>RentEase</h2>
+               </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -88,11 +91,13 @@ const Login = () => {
               navbarScroll
             >
             </Nav>
-            <Nav>
-              <Link to={'/'}>Home</Link>
-              <Link to={'/login'}>Login</Link>
-              <Link to={'/register'}>Register</Link>
-            </Nav>
+            <Nav className='navbar-brand'>
+                     <Link to={'/'} className='navhover'>Home</Link>
+                     <Link to={'/login' } className='navhover'>Login</Link>
+                     <Link to={'/register'} className='navhover'>Register</Link>
+                     <Link to={'/'} className='navhover'>Contact Us</Link>
+                     <img className='sign' src="sign.png"/>
+                  </Nav>
 
           </Navbar.Collapse>
         </Container>
@@ -145,7 +150,7 @@ const Login = () => {
                 variant="contained"
                 style={{ width: '200px' }}
               >
-                Sign Up
+                Sign In
               </Button>
             </Box>
             <Grid container>
@@ -154,7 +159,7 @@ const Login = () => {
                   {" Click here"}
                 </Link>
               </Grid>
-              <Grid item>Have an account?
+              <Grid item>Don't have account?
                 <Link style={{ color: "blue" }} to={'/register'} variant="body2">
                   {" Sign Up"}
                 </Link>

@@ -51,9 +51,12 @@ const Register = () => {
 
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container fluid>
-          <Navbar.Brand><h2>RentEase</h2></Navbar.Brand>
+       <Navbar expand="lg" className="bg-body-tertiary navbar">
+            <Container fluid>
+               <Navbar.Brand>
+                  <img className='logo-img' src="logo.png"/>
+                  <h2>RentEase</h2>
+               </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -62,11 +65,13 @@ const Register = () => {
               navbarScroll
             >
             </Nav>
-            <Nav>
-              <Link to={'/'}>Home</Link>
-              <Link to={'/login'}>Login</Link>
-              <Link to={'/register'}>Register</Link>
-            </Nav>
+            <Nav className='navbar-brand'>
+                     <Link to={'/'} className='navhover'>Home</Link>
+                     <Link to={'/login' } className='navhover'>Login</Link>
+                     <Link to={'/register'} className='navhover'>Register</Link>
+                     <Link to={'/'} className='navhover'>Contact Us</Link>
+                     <img className='sign' src="sign.png"/>
+                  </Nav>
 
           </Navbar.Collapse>
         </Container>
@@ -143,11 +148,11 @@ const Register = () => {
                 variant="contained"
                 style={{ width: '200px' }}
               >
-                Sign Up
+                Sign UP
               </Button>
             </Box>
             <Grid container>
-              <Grid item>Have an account?
+              <Grid item> Already have an account?
                 <Link style={{ color: "blue" }} to={'/login'} variant="body2">
                   {" Sign In"}
                 </Link>

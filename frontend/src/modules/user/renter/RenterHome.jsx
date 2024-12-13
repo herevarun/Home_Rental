@@ -73,9 +73,10 @@ const RenterHome = () => {
               navbarScroll
             >
             </Nav>
-            <Nav>
+            <Nav className='navbar-brand'>
               <h5 className='mx-3'>Hi {user.userData.name}</h5>
               <Link onClick={handleLogOut} to={'/'}>Log Out</Link>
+              <img className='sign' src="sign.png"/>
             </Nav>
           </Navbar.Collapse>
         </Container>

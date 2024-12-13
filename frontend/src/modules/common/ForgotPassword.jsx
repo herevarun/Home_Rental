@@ -53,10 +53,11 @@ const ForgotPassword = () => {
    };
    return (
       <>
-         <Navbar expand="lg" className="bg-body-tertiary">
+         <Navbar expand="lg" className="bg-body-tertiary navbar">
             <Container fluid>
                <Navbar.Brand>
-                  <Link to={'/'}>RentEase</Link>
+                  <img className='logo-img' src="logo.png"/>
+                  <h2>RentEase</h2>
                </Navbar.Brand>
                <Navbar.Toggle aria-controls="navbarScroll" />
                <Navbar.Collapse id="navbarScroll">
@@ -66,10 +67,12 @@ const ForgotPassword = () => {
                      navbarScroll
                   >
                   </Nav>
-                  <Nav>
-                     <Link to={'/'}>Home</Link>
-                     <Link to={'/login'}>Login</Link>
-                     <Link to={'/register'}>Register</Link>
+                  <Nav className='navbar-brand'>
+                     <Link to={'/'} className='navhover'>Home</Link>
+                     <Link to={'/login' } className='navhover'>Login</Link>
+                     <Link to={'/register'} className='navhover'>Register</Link>
+                     <Link to={'/'} className='navhover'>Contact Us</Link>
+                     <img className='sign' src="sign.png"/>
                   </Nav>
 
                </Navbar.Collapse>

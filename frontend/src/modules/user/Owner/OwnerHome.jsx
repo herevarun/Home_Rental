@@ -63,9 +63,12 @@ const OwnerHome = () => {
 
   return (
     <div>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container fluid>
-          <Navbar.Brand><h2>RentEase</h2></Navbar.Brand>
+       <Navbar expand="lg" className="bg-body-tertiary navbar">
+            <Container fluid>
+               <Navbar.Brand>
+                  <img className='logo-img' src="logo.png"/>
+                  <h2>RentEase</h2>
+               </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -74,9 +77,11 @@ const OwnerHome = () => {
               navbarScroll
             >
             </Nav>
-            <Nav>
-              <h5 className='mx-3'>Hi {user.userData.name}</h5>
-              <Link onClick={handleLogOut} to={'/'}>Log Out</Link>
+            
+            <Nav className='navbar-brand'>
+              <h5 className='mx-3 ' >Hi {user.userData.name}</h5>
+              <Link onClick={handleLogOut} to={'/'} className='navhover'>Log Out</Link>
+              <img className='sign' src="sign.png"/>
             </Nav>
           </Navbar.Collapse>
         </Container>

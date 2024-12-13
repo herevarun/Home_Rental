@@ -13,6 +13,7 @@ import AllProperty from './AllProperty';
 import AllBookings from './AllBookings';
 
 
+
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -64,9 +65,12 @@ const AdminHome = () => {
 
   return (
     <div>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container fluid>
-          <Navbar.Brand><h2>RentEase</h2></Navbar.Brand>
+      <Navbar expand="lg" className="bg-body-tertiary navbar">
+            <Container fluid>
+               <Navbar.Brand>
+                  <img className='logo-img' src="logo.png"/>
+                  <h2>RentEase</h2>
+               </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -75,9 +79,10 @@ const AdminHome = () => {
               navbarScroll
             >
             </Nav>
-            <Nav>
+            <Nav className='navbar-brand'>
               <h5 className='mx-3'>Hi {user.userData.name}</h5>
-              <Link onClick={handleLogOut} to={'/'}>Log Out</Link>
+              <Link onClick={handleLogOut} to={'/'} className='navhover'>Log Out</Link>
+              <img className='sign' src="sign.png"/>
             </Nav>
 
           </Navbar.Collapse>

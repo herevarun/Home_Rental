@@ -31,8 +31,11 @@ a {
 }
 
 .home-body {
-   height: 81.5vh;
+   height: 50%;
    overflow: hidden;
+}
+.home-body img {
+   background-size: cover;
 }
 
 .home-body .carousel {
@@ -90,6 +93,28 @@ select {
    display: flex;
    flex-wrap: wrap;
 }
+.logo-img{
+   width: 10%;
+}
+.navbar-brand{
+   display: flex;
+   align-items: center;
+}
+.navhover:hover{
+   color: rgb(47, 132, 230);
+   text-decoration: underline;
+
+
+}
+.sign{
+   width: 30px;
+   height: 30px;
+   margin-top: 0.5%;
+}
+.footlogo{
+   width: 30px;
+}
+
 
 .card {
    margin-right: 20px;
@@ -113,7 +138,15 @@ select {
    margin-bottom: 20px;
 }
 
-
+.navbar{
+   height: 72px;
+   position: sticky;
+   padding: 0 5% 0 2%;
+   display: block;
+}
+.navbar h2{
+   margin-top: 1%;
+}
 .message-window {
    /* flex: 1; */
    overflow-x: auto;
