@@ -1,4 +1,5 @@
-import axios from 'axios';
+
+import Axios from '../axiosInstance';
 import React, { useState, useEffect } from 'react';
 import { Button, Card, Modal, Carousel, Col, Form, InputGroup, Row } from 'react-bootstrap';
 // import { Col, Form, Input, Row, message } from 'antd';
@@ -32,7 +33,7 @@ const AllPropertiesCards = ({ loggedIn }) => {
 
    const getAllProperties = async () => {
       try {
-         const res = await axios.get('http://localhost:8001/api/user/getAllProperties');
+         const res = await Axios.get('/api/user/getAllProperties');
          setAllProperties(res.data.data);
       } catch (error) {
          console.log(error);
@@ -41,7 +42,7 @@ const AllPropertiesCards = ({ loggedIn }) => {
 
    const handleBooking = async (status, propertyId, ownerId) => {
       try {
-         await axios.post(`http://localhost:8001/api/user/bookinghandle/${propertyId}`, { userDetails, status, ownerId }, {
+         await Axios.post(`/api/user/bookinghandle/${propertyId}`, { userDetails, status, ownerId }, {
             headers: {
                Authorization: `Bearer ${localStorage.getItem('token')}`
             }

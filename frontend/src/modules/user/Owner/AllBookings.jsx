@@ -1,6 +1,6 @@
 import { message } from 'antd';
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import Axios from '../../axiosInstance';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -15,7 +15,7 @@ const AllProperty = () => {
 
    const getAllProperty = async () => {
       try {
-         const response = await axios.get('http://localhost:8001/api/owner/getallbookings', {
+         const response = await Axios.get('/api/owner/getallbookings', {
             headers: { 'Authorization': `Bearer ${localStorage.getItem("token")}` }
          });
          if (response.data.success) {
@@ -34,7 +34,7 @@ const AllProperty = () => {
 
    const handleStatus = async (bookingId, propertyId, status) => {
       try {
-         const res = await axios.post('http://localhost:8001/api/owner/handlebookingstatus', { bookingId, propertyId, status }, {
+         const res = await Axios.post('/api/owner/handlebookingstatus', { bookingId, propertyId, status }, {
             headers: { 'Authorization': `Bearer ${localStorage.getItem("token")}` }
          })
          if (res.data.success) {

@@ -1,6 +1,6 @@
 import { message } from 'antd';
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import Axios from '../axiosInstance';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -19,7 +19,7 @@ const AllUsers = () => {
 
    const getAllUser = async () => {
       try {
-         const response = await axios.get('http://localhost:8001/api/admin/getallusers', {
+         const response = await Axios.get('/api/admin/getallusers', {
             headers: { 'Authorization': `Bearer ${localStorage.getItem("token")}` }
          });
 
@@ -35,7 +35,7 @@ const AllUsers = () => {
 
    const handleStatus = async (userid, status) => {
       try {
-         await axios.post('http://localhost:8001/api/admin/handlestatus', { userid, status }, {
+         await Axios.post('/api/admin/handlestatus', { userid, status }, {
             headers: { 'Authorization': `Bearer ${localStorage.getItem("token")}` }
          }).then((res) => {
             if (res.data.success) {

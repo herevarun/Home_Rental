@@ -8,7 +8,8 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
-import axios from 'axios';
+
+import Axios from '../axiosInstance';
 
 const ForgotPassword = () => {
    const navigate = useNavigate()
@@ -29,7 +30,7 @@ const ForgotPassword = () => {
          alert("Please fill all fields")
       } else {
          if (data.password === data.confirmPassword) {
-            await axios.post("http://localhost:8001/api/user/forgotpassword", data)
+            await Axios.post("/api/user/forgotpassword", data)
                .then((res) => {
                   if (res.data.success) {
                      alert('Your password has been changed!')
