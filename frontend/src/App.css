@@ -190,9 +190,42 @@ select {
    border-radius: 50%;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 740px) {
    .chat-container {
       height: auto;
+   }
+   .property-content {
+      display: flex;
+      flex-direction: column;
+      
+   }
+   .logo-img{
+      width: 85%;
+      margin-top: -20%;
+   }
+   
+   .navbar-brand{
+      max-width: 50px;
+      flex-direction: row;
+   }
+   
+   
+   .container-fluid{
+      display: flex;
+      padding:5% 0;
+      flex-wrap: unset;
+   }
+   .filter-container {
+      padding: 33%;
+      display: flex;
+      flex-direction: column;
+      
+   }
+   .column{
+      justify-content: center;
+   }
+   .carousel-item {
+      margin-top: 23%;
    }
 }
 

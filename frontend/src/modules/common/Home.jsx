@@ -31,7 +31,7 @@ const Home = () => {
                      navbarScroll
                   >
                   </Nav>
-                  <Nav className='navbar-brand'>
+                  <Nav className='navbar-brand navtext'>
                      <Link to={'/'} className='navhover'>Home</Link>
                      <Link to={'/login' } className='navhover'>Login</Link>
                      <Link to={'/register'} className='navhover'>Register</Link>
