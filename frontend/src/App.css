@@ -28,6 +28,8 @@ a {
 
 .content {
    flex: 1;
+   overflow: visible;
+   display: block;
 }
 
 .home-body {
@@ -99,6 +101,7 @@ select {
 .navbar-brand{
    display: flex;
    align-items: center;
+   
 }
 .navhover:hover{
    color: rgb(47, 132, 230);
@@ -143,6 +146,7 @@ select {
    position: sticky;
    padding: 0 5% 0 2%;
    display: block;
+   z-index: 10;
 }
 .navbar h2{
    margin-top: 1%;
@@ -198,6 +202,9 @@ select {
       display: flex;
       flex-direction: column;
       
+   }
+   #me{
+      visibility: hidden;
    }
    .logo-img{
       width: 85%;
