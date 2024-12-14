@@ -13,7 +13,7 @@ Signin-
 <img width="1434" alt="Screenshot 2024-12-14 at 3 32 40 AM" src="https://github.com/user-attachments/assets/0d9bb035-8155-4d9e-984e-2d9cb97742c2" />
 
 Property Listing- 
-<img width="1344" alt="Screenshot 2024-12-14 at 3 38 33 AM" src="https://github.com/user-attachments/assets/5fa0736a-aee1-46db-a4d9-93981a2cd482" />
+<img width="1314" alt="Screenshot 2024-12-14 at 10 26 14 AM" src="https://github.com/user-attachments/assets/cf994a52-7532-4de7-b3a8-f4f82a437052" />
 
 Realtime Data for product Listing - 
 <img width="1434" alt="Screenshot 2024-12-14 at 3 31 47 AM" src="https://github.com/user-attachments/assets/1e0e670d-3b65-46e9-ae6e-98debf2a1ca9" />
@@ -25,7 +25,7 @@ User reviewing the properties listed by him-
 <img width="1434" alt="Screenshot 2024-12-14 at 3 33 01 AM" src="https://github.com/user-attachments/assets/1f3a19b0-adb7-4490-b492-2c6e5d467409" />
 
 User can enter Filters based on his/her preferences- 
-<img width="1161" alt="Screenshot 2024-12-14 at 3 35 17 AM" src="https://github.com/user-attachments/assets/c7d7310e-f4db-4aff-ab5d-ff4b2973557b" />
+<img width="1409" alt="Screenshot 2024-12-14 at 10 29 13 AM" src="https://github.com/user-attachments/assets/d21dd38e-b9aa-47a8-b88e-4bc6a53d0abf" />
 <img width="1434" alt="Screenshot 2024-12-14 at 3 32 10 AM" src="https://github.com/user-attachments/assets/0400a7b5-1592-493a-ad8f-0eebfaf5b478" />
 
 
