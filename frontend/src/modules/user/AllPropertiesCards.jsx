@@ -155,12 +155,18 @@ const AllPropertiesCards = ({ loggedIn }) => {
                                                 <Carousel activeIndex={index} onSelect={handleSelect}>
                                                    {property.propertyImage.map((image, idx) => (
                                                       <Carousel.Item key={idx}>
-                                                         <img
-                                                            src={`http://localhost:8001${image.path}`}
-                                                            alt={`Image ${idx + 1}`}
-                                                            className="d-block w-100"
-                                                         />
-                                                      </Carousel.Item>
+                                                      {console.log('Image object:', image)}
+                                                      {console.log('Constructed URL:', `${Axios.defaults.baseURL}${image.path}`)}
+                                                      <img
+                                                         src={`${Axios.defaults.baseURL}${image.path}`}
+                                                         alt={`Image ${idx + 1}`}
+                                                         className="d-block w-100"
+                                                         onError={(e) => {
+                                                            console.error('Image failed to load:', e.target.src);
+                                                            e.target.src = 'fallback-image.jpg'; // Replace with a default/fallback image
+                                                         }}
+                                                      />
+                                                   </Carousel.Item>
                                                    ))}
                                                 </Carousel>
                                              )}
