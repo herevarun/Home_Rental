@@ -70,7 +70,7 @@ const Register = () => {
                      <Link to={'/login' } className='navhover'>Login</Link>
                      <Link to={'/register'} className='navhover'>Register</Link>
                      <Link to={'/'} className='navhover'>Contact Us</Link>
-                     <img className='sign' src="sign.png"/>
+                     <img className='sign' id = "me" src="sign.png"/>
                   </Nav>
 
           </Navbar.Collapse>

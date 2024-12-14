@@ -81,7 +81,7 @@ const OwnerHome = () => {
             <Nav className='navbar-brand'>
               <h5 className='mx-3 ' >Hi {user.userData.name}</h5>
               <Link onClick={handleLogOut} to={'/'} className='navhover'>Log Out</Link>
-              <img className='sign' src="sign.png"/>
+              <img className='sign' id = "me" src="sign.png"/>
             </Nav>
           </Navbar.Collapse>
         </Container>
