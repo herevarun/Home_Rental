@@ -75,16 +75,16 @@ const AllUsers = () => {
                         <TableCell align="center">{user.type}</TableCell>
                         <TableCell align="center">{user.granted}</TableCell>
                         <TableCell align="center">
-                           {user.type === 'Owner' && user.granted === 'ungranted' ? (
-                              <Button onClick={() => handleStatus(user._id, 'granted')} size='small' variant="contained" color="success">
-                                 Granted
-                              </Button>
-                           ) : user.type === 'Owner' && user.granted === 'granted' ? (
-                              <Button onClick={() => handleStatus(user._id, 'ungranted')} size='small' variant="outlined" color="error">
-                                 Ungranted
-                              </Button>
-                           ) : null}
-                        </TableCell></TableRow>
+   {user.type === 'Owner' && (user.granted || 'ungranted') === 'ungranted' ? (
+      <Button onClick={() => handleStatus(user._id, 'granted')} size='small' variant="contained" color="success">
+         Granted
+      </Button>
+   ) : user.type === 'Owner' && (user.granted || 'ungranted') === 'granted' ? (
+      <Button onClick={() => handleStatus(user._id, 'ungranted')} size='small' variant="outlined" color="error">
+         Ungranted
+      </Button>
+   ) : null}
+</TableCell></TableRow>
                   ))}
                </TableBody>
             </Table>
