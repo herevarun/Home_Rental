@@ -49,7 +49,7 @@ const Login = () => {
                 navigate("/renterhome");
                 break;
               case "Owner":
-                if (isLoggedIn.granted === 'ungranted') {
+                if (isLoggedIn.granted === 'granted') {
                   message.error('Your account is not yet confirmed by the admin');
                 } else {
                   navigate("/ownerhome");
