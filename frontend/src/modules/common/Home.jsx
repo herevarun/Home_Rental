@@ -76,8 +76,8 @@ const Home = () => {
 
          <div className='property-content'>
             <div className='text-center'>
-               <h1 className='m-1 p-5'>All Properties that may you look for</h1>
-               <p style={{fontSize: 15, fontWeight: 800}}>Want to post your Property? <Link to={'/register'}><Button variant='outline-info'>Register as Owner</Button></Link></p>
+               <h1 className='m-1 p-5'>Checkout All the properties to Buy or Rent</h1>
+               <p style={{fontSize: 20, fontWeight: 600}}>Want to post your Property? <Link to={'/register'}><Button variant='outline-info'>Register as Owner</Button></Link></p>
             </div>
 
             <Container>

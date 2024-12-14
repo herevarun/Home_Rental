@@ -73,17 +73,20 @@ const AllPropertiesCards = ({ loggedIn }) => {
    };
 
    const filteredProperties = allProperties
-      .filter((property) => filterPropertyAddress === '' || property.propertyAddress.includes(filterPropertyAddress))
-      .filter(
-         (property) =>
-            filterPropertyAdType === '' ||
-            property.propertyAdType.toLowerCase().includes(filterPropertyAdType.toLowerCase())
-      )
-      .filter(
-         (property) =>
-            filterPropertyType === '' ||
-            property.propertyType.toLowerCase().includes(filterPropertyType.toLowerCase())
-      );
+   .filter((property) => 
+      filterPropertyAddress === '' || 
+      property.propertyAddress.toLowerCase().includes(filterPropertyAddress.trim().toLowerCase())
+   )
+   .filter(
+      (property) =>
+         filterPropertyAdType === '' ||
+         property.propertyAdType.toLowerCase().includes(filterPropertyAdType.toLowerCase())
+   )
+   .filter(
+      (property) =>
+         filterPropertyType === '' ||
+         property.propertyType.toLowerCase().includes(filterPropertyType.toLowerCase())
+   );
 
    return (
       <>
@@ -112,7 +115,7 @@ const AllPropertiesCards = ({ loggedIn }) => {
                filteredProperties.map((property) => (
                   <Card border="dark" key={property._id} style={{ width: '18rem', marginLeft: 10 }}>
                      <Card.Body>
-                        <Card.Title><img src={`http://localhost:8001${property.propertyImage[0].path}`} alt='photos' /></Card.Title>
+                        <Card.Title><img src={`${Axios.defaults.baseURL}${property.propertyImage[0].path}`} alt='photos' /></Card.Title>
                         <Card.Text>
                            <p style={{ fontWeight: 600 }} className='my-1'>Location:</p> {property.propertyAddress} <br />
                            <p style={{ fontWeight: 600 }} className='my-1'>Property Type:</p> {property.propertyType} <br />
