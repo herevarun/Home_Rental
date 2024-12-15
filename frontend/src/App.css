@@ -209,7 +209,9 @@ select {
       width: 85%;
       margin-top: -20%;
    }
-   
+   .props{
+      margin-top: 15%;
+   }
    .navbar-brand{
       max-width: 50px;
       flex-direction: row;

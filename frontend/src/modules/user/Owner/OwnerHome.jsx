@@ -88,7 +88,7 @@ const OwnerHome = () => {
       </Navbar>
 
       <Box sx={{ width: '100%' }}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Box className="props" sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
             <Tab label="Add Property" {...a11yProps(0)} />
             <Tab label="All Properties"
